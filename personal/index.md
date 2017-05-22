@@ -10,3 +10,4 @@ image:
   thumb:
 ---
 
+{% includeGallery UsaSommer2015 %}
