@@ -1,0 +1,10 @@
+bundle exec jekyll build --trace
+git add -A
+git commit -m "build html from jekyll source"
+git push origin sources
+
+cd _site
+git add -A
+git commit -m "push built site to github for hosting"
+git push origin master
+cd ..
