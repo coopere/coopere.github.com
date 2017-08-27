@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: photoIndex
 title: "Personal"
 date: 
 modified:
@@ -10,4 +10,3 @@ image:
   thumb:
 ---
 
-{% includeGallery UsaSommer2015 %}

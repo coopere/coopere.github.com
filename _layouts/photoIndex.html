@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="{{ site.url }}/css/main.css">
     <link rel="stylesheet" type="text/css" href="{{site.url}}/css/jekyll-photo-gallery.css">
     <link rel="stylesheet" href="{{ site.url }}/css/justifiedGallery.min.css">
-    <![endif]-->
 </head>
 
 <body id="js-body">
@@ -35,11 +34,11 @@
     <div class="wrap">
         <div class="page-feature">
             <div class="page-image">
-                <img src="{{ site.url }}/images/headers/header.jpg" class="page-feature-image" alt="{{ page.title }}">
+								<img src="{{ site.url }}/images/personal.jpg" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
                 {% if page.image.credit %}{% include image-credit.html %}{% endif %}
             </div><!-- /.page-image -->
         </div><!-- /.page-feature -->
-
+				<!--
         <div>
             <br>
             <h1>Albums</h1>
@@ -51,9 +50,10 @@
                 {% endfor %}
             </div>
         </div>
+				//-->
         <div class="photoStreamTitle">
             <br>
-            <h1>Photo Stream</h1>
+            <h1>Photos</h1>
             <div id="gallery" style="display:none; margin-bottom: 20px;"></div>
         </div>
     </div><!-- /.wrap -->
@@ -68,7 +68,7 @@
     //{% for photo in page.photolist %}
     photos.push({
         title: "{{ photo.title }}",
-        url: "{{ site.url }}/photography/{{ photo.title | toStub }}/",
+        url: "{{ site.url }}/personal/{{ photo.title | toStub }}/",
         thumbnail: "{{ site.url }}/images/photography/thumbnails/{{ photo.img }}.jpg",
     });
     //{% endfor %}
