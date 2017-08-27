@@ -41,7 +41,7 @@ module Jekyll
       photos = YAML::load_file('_data/photos.yaml')
       dir = site.config['photo_dir'] || 'personal'
 
-      site.pages << PhotoList.new(site, site.source, File.join(dir), photos["photos"], "Photography")
+      site.pages << PhotoList.new(site, site.source, File.join(dir), photos["photos"], "Personal")
 
       #Reference in site, used for sitemap
       photoSlugs = Array.new
@@ -70,28 +70,28 @@ module Jekyll
       site.data['photoSlugs'] = photoSlugs
 
       #Create a array containing all countries
-      countryArray = Array.new
+      albumArray = Array.new
       photos.each do |photo,details|
         [nil, *details, nil].each_cons(3){|prev, curr, nxt|
-          photoCountry = curr["country"]
-          countryArray.push(photoCountry)
+          photoAlbum = curr["album"]
+          albumArray.push(photoAlbum)
         }
       end
-      countryArray = countryArray.uniq
+      albumArray = albumArray.uniq
 
-      countryArray.each do |name|
-        photosPerCountry = Array.new
-        countrySlug = name.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      albumArray.each do |name|
+        photosPerAlbum = Array.new
+        albumSlug = name.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
         photos.each do |photo, details|
           [nil, *details, nil].each_cons(3){|prev, curr, nxt|
-            if(curr["country"] == name)
-              photosPerCountry.push(curr)
+            if(curr["album"] == name)
+              photosPerAlbum.push(curr)
             end
           }
         end
 
         #Make page
-        site.pages << PhotoList.new(site, site.source, File.join('photography', countrySlug), photosPerCountry, name)
+        site.pages << PhotoList.new(site, site.source, File.join('personal', albumSlug), photosPerAlbum, name.strip.gsub('-', ' '))
       end
     end
   end
