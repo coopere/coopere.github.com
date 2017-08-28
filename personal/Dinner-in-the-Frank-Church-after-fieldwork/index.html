@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dinner in the Frank Church after fieldwork • Cooper W Elsworth</title>
+  
+  
+  
+  
+
+  <link rel="canonical" href="/personal/Dinner-in-the-Frank-Church-after-fieldwork/">
+
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Cooper W Elsworth Atom Feed">
+  <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cleartype" content="on">
+
+  <!-- Replace with your own includes -->
+  <header id="masthead">
+  <div class="inner-wrap">
+    <a href="/" class="site-title">Cooper W Elsworth</a>
+    <nav role="navigation" class="menu top-menu">
+        <ul class="menu-item">
+	<li class="home"><a href="/">Cooper W Elsworth</a></li>
+	
+    
+        
+    
+    <li><a href="/research/" >Research</a></li>
+  
+    
+        
+    
+    <li><a href="/cv/" >CV</a></li>
+  
+    
+        
+    
+    <li><a href="/personal/" >Personal</a></li>
+  
+    
+        
+    
+    <li><a href="/contact/" >Contact</a></li>
+  
+</ul>
+    </nav>
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/animsition.css">
+  <link rel="stylesheet" type="text/css" href="/css/jekyll-photo-gallery.css">
+  <!-- HTML5 Shiv and Media Query Support for IE -->
+  <!--[if lt IE 9]>
+  <script src="/js/vendor/html5shiv.min.js"></script>
+  <script src="/js/vendor/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body id="js-body">
+
+<div id="page-wrapper" class="animsition">
+  <article>
+    <div class="photoCentre" itemscope itemtype="http://schema.org/Photograph">
+
+      <!-- Schema.org BlogPost Invisible Meta-Data -->
+      <meta itemprop="author" content=""/>
+      <meta itemprop="inLanguage" content="en-US"/>
+      <meta itemprop="isFamilyFriendly" content="true"/>
+      <meta itemprop="url" content="/personal/Dinner-in-the-Frank-Church-after-fieldwork/index.html"/>
+      <meta itemprop="name" content="Dinner in the Frank Church after fieldwork"/>
+      <meta itemprop="image" content="/images/photography/IMG17.jpg"/>
+      <meta itemprop="thumbnailUrl" content="/images/photography/thumbnails/IMG17.jpg"/>
+      <meta itemprop="description" content=""/>
+      <!-- todo: content location -->
+
+      <div id="photo" style="text-align: center;">
+        <img id="picture" style="max-height:100%; max-width:100%;" src="/images/photography/IMG17.jpg" class="entry-feature-image"
+             alt="Dinner in the Frank Church after fieldwork">
+      </div>
+      <div>
+        <a class="animsition-link btn-social photobtn" data-animsition-out="fade-out-right"
+           href="/personal/Shuteye-ridge-climbing-approach" style="float: left;">Newer</a>
+        <a class="animsition-link btn-social photobtn" data-animsition-out="fade-out-left"
+           href="/personal/Flying-in-style-for-USGS-fieldwork" style="float: right;">Older</a>
+      </div>
+      <br><br>
+
+    </div>
+  </article>
+</div>
+
+<footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		
+      
+        
+        
+			<li><a href="http://earth.stanford.edu/geophysics" target="_blank">Stanford Geophysics</a></li>
+		
+      
+        
+        
+			<li><a href="https://pangea.stanford.edu/researchgroups/sigma/" target="_blank">SIGMA Group</a></li>
+		
+      
+        
+        
+			<li><a href="https://scholar.google.com/citations?user=EqvmRtsAAAAJ" target="_blank">Google Scholar</a></li>
+		
+		</ul>
+	</nav><!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2017 <a href="">Cooper W Elsworth</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://github.com" rel="nofollow">GitHub</a>.</p>
+</footer>
+
+<script src="/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="/js/plugins/jquery.animsition.min.js"></script>
+<script src="https://use.fontawesome.com/fd9429b8e3.js"></script>
+
+<script>
+  var photo = $("#photo");
+  var picture = $("#picture");
+  photo.click(function (e) {
+    var pWidth = $(this).innerWidth();
+    var pOffset = $(this).offset();
+    var x = e.pageX - pOffset.left;
+    if (pWidth / 2 > x) {
+      window.location.href = '/personal/Shuteye-ridge-climbing-approach';
+    }
+    else {
+      window.location.href = '/personal/Flying-in-style-for-USGS-fieldwork';
+    }
+  });
+
+  document.onkeydown = function (e) {
+    switch (e.keyCode) {
+      case 37: //left click
+        window.location.href = '/personal/Shuteye-ridge-climbing-approach';
+        break;
+      case 39: //right click
+        window.location.href = '/personal/Flying-in-style-for-USGS-fieldwork';
+        break;
+    }
+  };
+
+  function fitImageSize(){
+    photo.height("100%");
+    var imageMax = $(window).height()/100*70;
+    var currentContentHeight = photo.height();
+    console.log(imageMax+"  "+currentContentHeight);
+    if(currentContentHeight > imageMax){
+      photo.height(imageMax);
+      photo.width("auto");
+      photo.marginLeft = "auto";
+      photo.height = picture.height;
+    }
+  }
+  fitImageSize();
+
+  //window.addEventListener('resize', fitImageSize(), true);
+  window.onresize = function(event) {
+    fitImageSize();
+  };
+
+  $(document).ready(function () {
+    fitImageSize();
+
+    //Dynamic Transition Support
+    $(".animsition").animsition({
+      inClass: 'fade-in',
+      outClass: 'fade-out',
+      inDuration: 1500,
+      outDuration: 400,
+      linkElement: '.animsition-link',
+      // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+      loading: true,
+      loadingParentElement: 'body', //animsition wrapper element
+      loadingClass: 'animsition-loading',
+      unSupportCss: [
+        'animation-duration',
+        '-webkit-animation-duration',
+        '-o-animation-duration'
+      ],
+      //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+      //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+      overlay: false,
+      overlayClass: 'animsition-overlay-slide',
+      overlayParentElement: 'body'
+    });
+  });
+</script>
+
+</body>
+
+</html>
