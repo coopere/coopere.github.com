@@ -44,7 +44,7 @@
             <h1>Albums</h1>
             <div>
                 {% for post in site.posts %}
-                    {% if post.layout != 'album' %}
+                    {% if post.layout == 'album' %}
                         {% include post-grid-cards.html %}
                     {% endif %}
                 {% endfor %}
@@ -53,7 +53,7 @@
 -->
 				<div class="photoStreamTitle">
             <br>
-            <h1>Photos</h1>
+            <!--<h1>Photos</h1>-->
             <div id="gallery" style="display:none; margin-bottom: 20px;"></div>
         </div>
     </div><!-- /.wrap -->
@@ -70,6 +70,7 @@
         title: "{{ photo.title }}",
         url: "{{ site.url }}/personal/{{ photo.title | toStub }}/",
         thumbnail: "{{ site.url }}/images/photography/thumbnails/{{ photo.img }}.jpg",
+				album: "{{ photo.album }}"
     });
     //{% endfor %}
 

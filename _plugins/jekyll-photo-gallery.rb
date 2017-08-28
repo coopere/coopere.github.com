@@ -69,7 +69,7 @@ module Jekyll
       end
       site.data['photoSlugs'] = photoSlugs
 
-      #Create a array containing all countries
+      #Create a array containing all albums
       albumArray = Array.new
       photos.each do |photo,details|
         [nil, *details, nil].each_cons(3){|prev, curr, nxt|
@@ -91,7 +91,7 @@ module Jekyll
         end
 
         #Make page
-        site.pages << PhotoList.new(site, site.source, File.join('personal', albumSlug), photosPerAlbum, name.strip.gsub('-', ' '))
+        #site.pages << PhotoList.new(site, site.source, File.join('personal', albumSlug), photosPerAlbum, name.strip.gsub('-', ' '))
       end
     end
   end
